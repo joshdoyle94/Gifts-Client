@@ -39,6 +39,16 @@ const alwaysOptions = (
 				Home
 			</Link>
 		</Nav.Link>
+		<Nav.Link>
+			<Link to='/gifts' style={linkStyle}>
+				View All Gifts
+			</Link>
+		</Nav.Link>
+		<Nav.Link>
+			<Link to='/create' style={linkStyle}>
+				Create a Gift
+			</Link>
+		</Nav.Link>
 	</>
 )
 
@@ -46,7 +56,7 @@ const Header = ({ user }) => (
 	<Navbar bg='primary' variant='dark' expand='md'>
 		<Navbar.Brand>
             <Link to='/' style={linkStyle}>
-                react-auth-template
+                Josh's Gifts App
             </Link>
         </Navbar.Brand>
 		<Navbar.Toggle aria-controls='basic-navbar-nav' />

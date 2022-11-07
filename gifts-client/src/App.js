@@ -12,6 +12,8 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+import GiftIndex from './components/gifts/GiftIndex'
+import GiftCreate from './components/gifts/GiftCreate'
 
 const App = () => {
 
@@ -67,6 +69,20 @@ const App = () => {
               <RequireAuth user={user}>
                 <ChangePassword msgAlert={msgAlert} user={user} />
               </RequireAuth>}
+          />
+		  <Route
+            path='/gifts'
+            element={
+              <RequireAuth user={user}>
+                <GiftIndex msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
+		  <Route
+            path='/create'
+            element={
+              <RequireAuth user={user}>
+                <GiftCreate msgAlert={msgAlert} user={user} />
+            </RequireAuth>}
           />
 				</Routes>
 				{msgAlerts.map((msgAlert) => (
