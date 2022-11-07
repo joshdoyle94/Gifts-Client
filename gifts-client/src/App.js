@@ -14,6 +14,7 @@ import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import GiftIndex from './components/gifts/GiftIndex'
 import GiftCreate from './components/gifts/GiftCreate'
+import GiftShow from './components/gifts/GiftShow'
 
 const App = () => {
 
@@ -76,6 +77,12 @@ const App = () => {
               <RequireAuth user={user}>
                 <GiftIndex msgAlert={msgAlert} user={user} />
               </RequireAuth>}
+          />
+		  <Route
+            path='/gifts/:id'
+            element={
+                <GiftShow msgAlert={msgAlert} user={user} />
+            }
           />
 		  <Route
             path='/create'
